@@ -7,7 +7,13 @@
   <body>
     <p>
 <?php
-  echo $_GET['lastname'] . ' ' . $_GET['firstname'] . ' ' . $_GET['age'];
+/*Création d'une condition si l'âge existe*/
+  if(isset($_GET['lastname']) && isset($_GET['firstname']) && isset($_GET['age'])){
+    echo $_GET['lastname'] . ' ' . $_GET['firstname'];
+  } else {
+    /*Autre condition si il n'est pas présent*/
+    echo 'il manque l\'age';
+  }
 ?>
     </p>
   </body>
