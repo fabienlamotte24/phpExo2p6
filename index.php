@@ -6,15 +6,15 @@
   </head>
   <body>
     <p>
-<?php
-/*Création d'une condition si l'âge existe*/
-  if(isset($_GET['lastname']) && isset($_GET['firstname']) && isset($_GET['age'])){
-    echo $_GET['lastname'] . ' ' . $_GET['firstname'];
-  } else {
-    /*Autre condition si il n'est pas présent*/
-    echo 'il manque l\'age';
-  }
-?>
+       <?php
+       //Création d'une condition si le paramètre âge existe
+         if(!empty($_GET['lastname']) && !empty($_GET['firstname']) && !empty($_GET['age'])){
+           echo $_GET['lastname'] . ' ' . $_GET['firstname'] . ' ' . $_GET['age'];
+         } else {
+           //Autre condition si le paramètre age n'est pas présent
+           echo 'Il manque l\'âge';
+         }
+       ?>
     </p>
   </body>
 </html>
